@@ -473,7 +473,7 @@ class AssetsAudioPlayer {
 
   /// toggle the looping state
   /// if it was looping -> stops this
-  /// if it was'nt looping -> now it is
+  /// if it wasn't looping -> now it is
   Future<void> toggleLoop() async {
     if (_playlist != null) {
       final currentMode = loopMode.value;
