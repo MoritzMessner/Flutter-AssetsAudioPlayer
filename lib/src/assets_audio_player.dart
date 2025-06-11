@@ -497,7 +497,7 @@ class AssetsAudioPlayer {
 
   /// toggle the shuffling state
   /// if it was shuffling -> stops this
-  /// if it was'nt shuffling -> now it is
+  /// if it wasn't shuffling -> now it is
   void toggleShuffle() {
     shuffle = !shuffle;
     _updatePlaylistIndexes();
