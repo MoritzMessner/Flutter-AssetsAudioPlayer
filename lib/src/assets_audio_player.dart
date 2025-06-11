@@ -538,7 +538,7 @@ class AssetsAudioPlayer {
   }
 
   void _init() {
-    // default action, can be overriden using player.onErrorDo = (error, player) { ACTION };
+    // default action, can be overridden using player.onErrorDo = (error, player) { ACTION };
     onErrorDo = (errorHandler) {
       print(errorHandler.error.message);
       errorHandler.player.stop();
