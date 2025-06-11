@@ -185,7 +185,7 @@ class AssetsAudioPlayer {
 
   /// The channel between the native and Dart
   final MethodChannel _sendChannel = const MethodChannel('assets_audio_player');
-  late MethodChannel _recieveChannel;
+  late MethodChannel _receiveChannel;
 
   /// Stores opened asset audio path to use it on the `_current` BehaviorSubject (in `PlayingAudio`)
   Audio? _lastOpenedAssetsAudio;
@@ -546,8 +546,8 @@ class AssetsAudioPlayer {
 
     _playerEditor = PlayerEditor._(this);
 
-    _recieveChannel = MethodChannel('assets_audio_player/$id');
-    _recieveChannel.setMethodCallHandler((MethodCall call) async {
+    _receiveChannel = MethodChannel('assets_audio_player/$id');
+    _receiveChannel.setMethodCallHandler((MethodCall call) async {
       // print('received call ${call.method} with arguments ${call.arguments}');
       switch (call.method) {
         case 'log':
