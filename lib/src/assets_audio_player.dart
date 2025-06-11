@@ -343,14 +343,14 @@ class AssetsAudioPlayer {
   ValueStream<bool> get playlistFinished => _playlistFinished.stream;
 
   /// Called when the current playlist song has finished (mutable)
-  /// Using a playlist, the `finished` stram will be called only if the complete playlist finished
+  /// Using a playlist, the `finished` stream will be called only if the complete playlist finished
   /// _assetsAudioPlayer.playlistAudioFinished.listen((audio){
   ///      the $audio has finished to play, moving to next audio
   /// })
   final PublishSubject<Playing> _playlistAudioFinished = PublishSubject();
 
   /// Called when the current playlist song has finished
-  /// Using a playlist, the `finished` stram will be called only if the complete playlist finished
+  /// Using a playlist, the `finished` stream will be called only if the complete playlist finished
   Stream<Playing> get playlistAudioFinished => _playlistAudioFinished.stream;
 
   /// Then current playing song position (in seconds) (mutable)
